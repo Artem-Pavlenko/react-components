@@ -1,0 +1,64 @@
+
+.buttonBlock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    padding: 24px 72px;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: darkcyan;
+    border: 0;
+    border-radius: 0;
+    outline: none;
+    color: white;
+    font-weight: bold;
+    position: relative;
+}
+
+.spanContainer {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    /*не даст контенту вылазить за родителя*/
+    overflow: hidden;
+
+}
+
+.circle {
+    display: block;
+    position: absolute;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, .4);
+    /*отключает взаимодействие с даным элиментом (без этого свойства также будет работать,
+    хорошей практикой является отключать любык взамодействия с анимациями*/
+    pointer-events: none;
+    width: 50px;
+    height: 50px;
+    /*выравниваем круг по центру клика мышки*/
+    transform: translate(-50%, -50%);
+    animation: scaleUp 1s forwards;
+}
+
+@keyframes scaleUp {
+    0% {
+        opacity: 1;
+        /*scale(0) - убиваем в 0, то есть не будет ни высоты ни ширины
+        и + добавим выравнивание по центру (translate(-50%, -50%)) чтобы не перехатереть
+        ! ! ! ВАЖНО чтобы translate(-50%, -50%) был перед scale() иначе это приведёт к кривости */
+        transform: translate(-50%, -50%) scale(0);
+    }
+    100% {
+        opacity: 0;
+        /*увеличеваем х25 (scale)*/
+
+        transform: translate(-50%, -50%) scale(25);
+    }
+}
