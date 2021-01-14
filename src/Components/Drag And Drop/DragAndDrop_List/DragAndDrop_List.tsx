@@ -4,7 +4,7 @@ import cn from "classnames"
 
 // https://www.youtube.com/watch?v=-9qu_Z0D84g&list=PL5_s7xdj2Vsw6DygVrvYlWF_keNESfnC0&ab_channel=SteptoWeb
 
-export const DragAndDrop = () => {
+export const DragAndDrop_List = () => {
 
     const [dragTrigger, setDragTrigger] = useState(false)
     const [onDragEnter, setOnDragEnter] = useState(false)

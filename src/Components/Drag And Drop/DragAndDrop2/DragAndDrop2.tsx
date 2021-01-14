@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, DragEvent} from "react"
 import s from "./DragAndDrop2.module.css"
 
 type CardType = {
@@ -18,24 +18,24 @@ export const DragAndDrop2 = () => {
 
     const [currentCard, serCurrentCard] = useState<CardType | null>(null)
 
-    function dragStart(e: React.DragEvent<HTMLDivElement>, card: CardType) {
+    function dragStart(e: DragEvent<HTMLDivElement>, card: CardType) {
         // TypeError: Cannot read property 'style' of null
         // setTimeout( () => e.currentTarget.style.background = 'red', 0)
         console.log('card: ', card)
         serCurrentCard(card)
     }
 
-    function dragEnd(e: React.DragEvent<HTMLDivElement>) {
+    function dragEnd(e: DragEvent<HTMLDivElement>) {
         e.currentTarget.className = `${s.card} ${s.leave}`
 
     }
 
-    function dragOver(e: React.DragEvent<HTMLDivElement>) {
+    function dragOver(e: DragEvent<HTMLDivElement>) {
         e.preventDefault()
         e.currentTarget.className = `${s.card} ${s.hovered}`
     }
 
-    function drop(e: React.DragEvent<HTMLDivElement>, card: CardType) {
+    function drop(e: DragEvent<HTMLDivElement>, card: CardType) {
         e.preventDefault()
         setCardList(cardList.sort(sortCard).map(c => {
             if (c.id === card.id) {
