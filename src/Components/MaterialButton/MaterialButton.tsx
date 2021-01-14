@@ -20,9 +20,9 @@ export const MaterialButton = () => {
         setPositionY(posY)
     }
 
-    const removeCircleItem = () => {
-        setShow(false)
-    }
+    // const removeCircleItem = () => {
+    //
+    // }
 
     const click = (event: MouseEvent<HTMLButtonElement> | MouseEvent) => {
         const offset = container && container.current && container.current.getBoundingClientRect()

@@ -1,0 +1,34 @@
+
+.cardBlock {
+    min-width: 100vh;
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card {
+    width: 200px;
+    height: 300px;
+    border-radius: 12px;
+    border: 5px solid;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    cursor: grab;
+}
+
+.hovered {
+    box-shadow: 0 0 7px 5px rgba(0, 0, 0, .2);
+    background-color: darkcyan;
+}
+
+.leave {
+    box-shadow: none;
+    background-color: white;
+}
+
+.hide {
+    display: none;
+}
