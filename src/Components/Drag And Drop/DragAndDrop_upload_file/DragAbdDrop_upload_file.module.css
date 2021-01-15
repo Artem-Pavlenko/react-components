@@ -1,0 +1,31 @@
+
+.mainBlock {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    border: 1px solid;
+}
+
+.dropAreaWithAutFile {
+    width: 80%;
+    height: 80vh;
+    border: 5px dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*transition: all .5s linear;*/
+    /*text-shadow: 2px 0 1px rgba(253,245,211,0.89);*/
+}
+
+.dropArea {
+    width: 80%;
+    height: 80vh;
+    border: 5px dashed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*transition: all .5s linear;*/
+    /*text-shadow: 2px 0 1px rgba(253,245,211,0.89);*/
+}
