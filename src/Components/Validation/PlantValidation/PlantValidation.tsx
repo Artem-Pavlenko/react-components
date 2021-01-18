@@ -24,14 +24,35 @@ export const PlantValidation = () => {
     }
 
     const emailChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        console.log('1:', emailValue)
         setEmailValue(e.currentTarget.value)
+        console.log('1:', emailValue)
         const re = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
 
-        if (!re.test(String(emailValue).toLowerCase())) {
-            setEmailError( "Incorrect email")
+        // ВАЖНО! (!re.test(String(e.currentTarget.value).toLowerCase())) здесь должно быть иммено (e.currentTarget.value)
+        // если будем вставлять целиком почту, то в момент вставляния emailValue будет ещё старое значение, то есть пустое
+        // и соотвествино сработает setEmailError("Incorrect email")
+
+        if (!re.test(String(e.currentTarget.value).toLowerCase())) {
+            setEmailError("Incorrect email")
         } else {
+            // если всё ок - зануляем ошибку
             setEmailError("")
         }
+    }
+
+    const passChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+        setPassValue(e.currentTarget.value)
+        if (e.currentTarget.value.length < 4) {
+            setPassError("The minimum password length is 4 characters.")
+        } else if (e.currentTarget.value.length > 8) {
+            setPassError( "The maximum password length is 8 characters.")
+        } else if (!e.currentTarget.value) {
+            setPassError("Password field cannot be empty")
+        } else {
+            setPassError("")
+        }
+
     }
 
     return (
@@ -53,7 +74,7 @@ export const PlantValidation = () => {
                     name="password"
                     placeholder="Enter your password ..."
                     value={passValue}
-                    onChange={e => setPassValue(e.currentTarget.value)}
+                    onChange={passChangeHandler}
                     onBlur={blurHandler}
                 />
                 <button type="submit">Registration</button>
