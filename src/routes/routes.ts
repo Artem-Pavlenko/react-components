@@ -9,6 +9,7 @@ import Preloader_transition from "../Components/Animations/react-transition-grou
 import {v1} from 'uuid'
 import Preloader_CSSTransition
     from "../Components/Animations/react-transition-group/Preloader_CSSTransition/Preloader_CSSTransition";
+import TypingEffect from "../Components/Animations/TypingEffect/TypingEffect";
 
 
 export const componentsRoutes = [
@@ -59,4 +60,9 @@ export const animationRoutes = [
         Component: Preloader_CSSTransition,
         id: v1()
     },
+    {
+        path: '/typingEffect',
+        Component: TypingEffect,
+        id: v1()
+    }
 ]

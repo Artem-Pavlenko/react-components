@@ -1,0 +1,49 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.wrapper {
+    width: 100%;
+    height: 300px;
+    background-color: #042f36;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.title {
+    font-size: 40px;
+    /*ширину указываем === сколько у нас букв в тексте, ch - символ*/
+    width: 21ch;
+    color: white;
+    /*важно добавить font-family: monospace;
+    это необходимо для того чтобы анимация корректно отрабатывала
+    в моношириных шрифтах все буквы одинакового размера и заглавные и прописные также*/
+    font-family: monospace;
+    /*чтобы контент не переносился*/
+    white-space: nowrap;
+    overflow: hidden;
+    /*заготовка под курсор*/
+    border-right: 3px solid orange;
+    /*steps(21) то есть столько сколько у нас символов и ширина (21ch)*/
+    animation: flashing-border .75s step-end infinite, printed-text 5s steps(21);
+}
+
+@keyframes flashing-border {
+    0% {
+        border-color: orange;
+    }
+    50%{
+        border-color: transparent;
+    }
+    100% {
+        border-color: orange;
+    }
+}
+
+@keyframes printed-text {
+    0%{
+        width: 0;
+    }
+}

@@ -21,10 +21,11 @@ function App() {
                     </ul>
                 </div>
                 <div>
-                    <h2>Animation on react</h2>
+                    <h2>Animation's</h2>
                     <ul>
                         <li><Link to={'/rtg'}>Preloader (Transition)</Link></li>
                         <li><Link to={'/rtgCSSTransition'}>Preloader (CSSTransition)</Link></li>
+                        <li><Link to={'/typingEffect'}>Typing effect</Link></li>
                     </ul>
                 </div>
             </div>

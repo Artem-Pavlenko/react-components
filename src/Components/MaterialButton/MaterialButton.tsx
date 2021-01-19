@@ -43,7 +43,7 @@ export const MaterialButton: React.FC<ButtonPropsType> = (props) => {
                 <span className={s.spanContainer} ref={container}>
                     {show && <div style={{left: `${positionX}px`, top: `${positionY}px`}} className={s.circle}/>}
                 </span>
-                <span className={s.btnText}>{props.children}</span>
+                <span className={s.btnText}>{props.children || 'click !'}</span>
             </button>
         </div>
     )
