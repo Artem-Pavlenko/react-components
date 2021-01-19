@@ -5,8 +5,10 @@ import {DragAndDrop2} from "../Components/Drag And Drop/DragAndDrop2/DragAndDrop
 import {DragAndDrop_trello} from "../Components/Drag And Drop/DragAndDrop_ difficult_version/DragAndDrop_trello";
 import {DragAndDrop_upload_file} from "../Components/Drag And Drop/DragAndDrop_upload_file/DragAndDrop_upload_file";
 import {PlantValidation} from "../Components/Validation/PlantValidation/PlantValidation";
-import Preloader_ from "../Components/Animations/Preloader_/Preloader_";
+import Preloader_transition from "../Components/Animations/react-transition-group/Preloader_transition/Preloader_transition";
 import {v1} from 'uuid'
+import Preloader_CSSTransition
+    from "../Components/Animations/react-transition-group/Preloader_CSSTransition/Preloader_CSSTransition";
 
 
 export const componentsRoutes = [
@@ -49,7 +51,12 @@ export const componentsRoutes = [
 export const animationRoutes = [
     {
         path: '/rtg',
-        Component: Preloader_,
+        Component: Preloader_transition,
         id: v1()
-    }
+    },
+    {
+        path: '/rtgCSSTransition',
+        Component: Preloader_CSSTransition,
+        id: v1()
+    },
 ]

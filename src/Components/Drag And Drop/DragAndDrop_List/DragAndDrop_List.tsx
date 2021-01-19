@@ -104,38 +104,38 @@ type LiDragAndDropType = {
     dropItem?: any
 }
 
-const Li = (props: LiDragAndDropType) => {
-
-    const liRef = useRef<HTMLLIElement>(null)
-
-    const [onDragEnter, setOnDragEnter] = useState(false)
-
-    const dragOver = (event: DragEvent<HTMLLIElement>) => {
-        // для того чтобы сработала функция dragDrop
-        event.preventDefault()
-    }
-    const dragEnter = () => {
-        // при наведении
-        setOnDragEnter(true)
-    }
-    const dragLeave = () => {
-        // при покидании
-        setOnDragEnter(false)
-    }
-    const dragDrop = () => {
-
-        liRef && liRef.current && liRef.current.append(props.dropItem)
-    }
-
-
-    return (
-        <li
-            ref={liRef}
-            className={cn(s.listCell, {[s.hovered]: onDragEnter})}
-            onDragOver={dragOver}
-            onDragEnter={dragEnter}
-            onDragLeave={dragLeave}
-            onDrop={dragDrop}
-        >{props.text || props.children} </li>
-    )
-}
+// const Li = (props: LiDragAndDropType) => {
+//
+//     const liRef = useRef<HTMLLIElement>(null)
+//
+//     const [onDragEnter, setOnDragEnter] = useState(false)
+//
+//     const dragOver = (event: DragEvent<HTMLLIElement>) => {
+//         // для того чтобы сработала функция dragDrop
+//         event.preventDefault()
+//     }
+//     const dragEnter = () => {
+//         // при наведении
+//         setOnDragEnter(true)
+//     }
+//     const dragLeave = () => {
+//         // при покидании
+//         setOnDragEnter(false)
+//     }
+//     const dragDrop = () => {
+//
+//         liRef && liRef.current && liRef.current.append(props.dropItem)
+//     }
+//
+//
+//     return (
+//         <li
+//             ref={liRef}
+//             className={cn(s.listCell, {[s.hovered]: onDragEnter})}
+//             onDragOver={dragOver}
+//             onDragEnter={dragEnter}
+//             onDragLeave={dragLeave}
+//             onDrop={dragDrop}
+//         >{props.text || props.children} </li>
+//     )
+// }

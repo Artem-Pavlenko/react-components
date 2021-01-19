@@ -23,7 +23,8 @@ function App() {
                 <div>
                     <h2>Animation on react</h2>
                     <ul>
-                        <li><Link to={'/rtg'}>React Transition Group</Link></li>
+                        <li><Link to={'/rtg'}>Preloader (Transition)</Link></li>
+                        <li><Link to={'/rtgCSSTransition'}>Preloader (CSSTransition)</Link></li>
                     </ul>
                 </div>
             </div>

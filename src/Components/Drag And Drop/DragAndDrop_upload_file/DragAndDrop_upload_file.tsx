@@ -24,9 +24,10 @@ export const DragAndDrop_upload_file = () => {
         e.preventDefault()
         let files = e.dataTransfer.files
         // FileList type
-        console.log(files)
+        console.log('files : ',files)
         const formData = new FormData().append('file', files[0])
         setDrag(false)
+        console.log('formData : ', formData)
     }
 
     return (
