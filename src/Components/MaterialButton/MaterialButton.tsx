@@ -3,7 +3,11 @@ import s from "./MaterialButton.module.css"
 
 // https://www.youtube.com/watch?v=UvpegI4YI4Q&ab_channel=SteptoWeb
 
-export const MaterialButton = () => {
+type ButtonPropsType = {
+    onClick?: () => void
+}
+
+export const MaterialButton: React.FC<ButtonPropsType> = (props) => {
 
     const button = useRef<HTMLButtonElement>(null)
     const container = useRef<HTMLSpanElement>(null)
@@ -35,11 +39,11 @@ export const MaterialButton = () => {
 
     return (
         <div className={s.buttonBlock}>
-            <button onMouseDown={click} className={s.btn} ref={button}>
+            <button onClick={props.onClick} onMouseDown={click} className={s.btn} ref={button}>
                 <span className={s.spanContainer} ref={container}>
                     {show && <div style={{left: `${positionX}px`, top: `${positionY}px`}} className={s.circle}/>}
                 </span>
-                <span className={s.btnText}>Click!</span>
+                <span className={s.btnText}>{props.children}</span>
             </button>
         </div>
     )
