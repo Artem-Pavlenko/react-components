@@ -55,3 +55,12 @@ ul li {
     padding: 10px;
     list-style: none;
 }
+
+@media screen and (max-width: 768px){
+    .menuContent {
+        width: 100%;
+    }
+    .blur{
+        backdrop-filter: none;
+    }
+}
