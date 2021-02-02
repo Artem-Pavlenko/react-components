@@ -1,5 +1,5 @@
 import {MaterialButton} from "../Components/MaterialButton/MaterialButton";
-import {BurgerMenu} from "../Components/BurgerMenu/BurgerMenu";
+import {BurgerMenuButton} from "../Components/BurgerMenuButton/BurgerMenuButton";
 import {DragAndDrop_List} from "../Components/Drag And Drop/DragAndDrop_List/DragAndDrop_List";
 import {DragAndDrop2} from "../Components/Drag And Drop/DragAndDrop2/DragAndDrop2";
 import {DragAndDrop_trello} from "../Components/Drag And Drop/DragAndDrop_ difficult_version/DragAndDrop_trello";
@@ -12,6 +12,7 @@ import Preloader_CSSTransition
     from "../Components/Animations/react-transition-group/Preloader_CSSTransition/Preloader_CSSTransition";
 import TypingEffect from "../Components/Animations/TypingEffect/TypingEffect";
 import {ModalBlock} from "../Components/Modal/ModalBlock";
+import BurgerMenu from "../Components/BurgerMenu/BurgerMenu";
 
 
 export const componentsRoutes = [
@@ -21,8 +22,8 @@ export const componentsRoutes = [
         id: v1()
     },
     {
-        path: '/burgerMenu',
-        Component: BurgerMenu,
+        path: '/burgerMenuButton',
+        Component: BurgerMenuButton,
         id: v1()
     },
     {
@@ -54,6 +55,11 @@ export const componentsRoutes = [
         path: '/modal',
         Component:ModalBlock,
         id: v1()
+    },
+    {
+        path: '/burgerMenu',
+        Component: BurgerMenu,
+        id : v1()
     }
 ]
 

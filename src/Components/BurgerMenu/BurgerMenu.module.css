@@ -1,23 +1,61 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
 
-.menBlock {
+nav {
+    height: 50px;
+    width: 100%;
+    background-color: gray;
+    position: fixed;
+    z-index: 50;
+    top: 0;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
-.burger, .burgerActive {
-    width: 180px;
-    height: 120px;
+main {
+    padding: 50px;
+}
+
+p {
+    margin: 20px;
+}
+
+.burgerMenuBlock {
+
+}
+
+.burgerBtn {
+    width: 20px;
+    height: 20px;
+    margin-left: 20px;
+    position: relative;
     cursor: pointer;
-    transition: all .2s linear;
+}
+.burgerBtn span {
+    position: absolute;
+    top: 9px;
+    width: 20px;
+    height: 3px;
+    background-color: black;
 }
 
-.burger {
-    background: url("../../assets/icon/menu.svg") no-repeat center;
-    background-size: contain;
+.burgerBtn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 20px;
+    height: 3px;
+    background-color: black;
 }
 
-.burgerActive {
-    background: url("../../assets/icon/close.svg") no-repeat center;
-    background-size: contain;
+.burgerBtn:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 20px;
+    height: 3px;
+    background-color: black;
 }

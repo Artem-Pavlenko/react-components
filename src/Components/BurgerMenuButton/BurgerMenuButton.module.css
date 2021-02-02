@@ -1,0 +1,23 @@
+
+.menBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.burger, .burgerActive {
+    width: 180px;
+    height: 120px;
+    cursor: pointer;
+    transition: all .2s linear;
+}
+
+.burger {
+    background: url("../../assets/icon/menu.svg") no-repeat center;
+    background-size: contain;
+}
+
+.burgerActive {
+    background: url("../../assets/icon/close.svg") no-repeat center;
+    background-size: contain;
+}

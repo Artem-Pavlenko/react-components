@@ -1,9 +1,11 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import './App.css'
-import AppRouter from "./routes/AppRouter";
+import AppRouter from './routes/AppRouter'
 
 function App() {
+
+
 
     return (
         <div className="App">
@@ -12,6 +14,7 @@ function App() {
                     <h2>React-components</h2>
                     <ul>
                         <li><Link to={'/button'}>Material button</Link></li>
+                        <li><Link to={'/burgerMenuButton'}>Burger menu(button)</Link></li>
                         <li><Link to={'/burgerMenu'}>Burger menu</Link></li>
                         <li><Link to={'/dragAndDrop'}>Drag and drop</Link></li>
                         <li><Link to={'/dragAndDrop2'}>Drag and drop 2</Link></li>
