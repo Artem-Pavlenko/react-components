@@ -36,6 +36,12 @@ export const DragAndDrop_List = () => {
         liRef && liRef.current && liRef.current.append()
     }
 
+    function hand(e: React.SyntheticEvent<HTMLVideoElement>) {
+        // e.currentTarget.clientTop
+    }
+
+
+
     return (
         <div className={s.mainBlock}>
             <div className={s.wrapper}>

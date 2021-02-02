@@ -18,6 +18,7 @@ function App() {
                         <li><Link to={'/dragAndDrop-difficult_version'}>Drag and drop(difficult version)</Link></li>
                         <li><Link to={'/dragAndDrop-upload_file'}>Drag and drop(upload file)</Link></li>
                         <li><Link to={'/plantValidation'}>Plant validation</Link></li>
+                        <li><Link to={'/modal'}>Modal</Link></li>
                     </ul>
                 </div>
                 <div>

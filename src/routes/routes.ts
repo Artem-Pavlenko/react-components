@@ -5,11 +5,13 @@ import {DragAndDrop2} from "../Components/Drag And Drop/DragAndDrop2/DragAndDrop
 import {DragAndDrop_trello} from "../Components/Drag And Drop/DragAndDrop_ difficult_version/DragAndDrop_trello";
 import {DragAndDrop_upload_file} from "../Components/Drag And Drop/DragAndDrop_upload_file/DragAndDrop_upload_file";
 import {PlantValidation} from "../Components/Validation/PlantValidation/PlantValidation";
-import Preloader_transition from "../Components/Animations/react-transition-group/Preloader_transition/Preloader_transition";
+import Preloader_transition
+    from "../Components/Animations/react-transition-group/Preloader_transition/Preloader_transition";
 import {v1} from 'uuid'
 import Preloader_CSSTransition
     from "../Components/Animations/react-transition-group/Preloader_CSSTransition/Preloader_CSSTransition";
 import TypingEffect from "../Components/Animations/TypingEffect/TypingEffect";
+import {ModalBlock} from "../Components/Modal/ModalBlock";
 
 
 export const componentsRoutes = [
@@ -47,8 +49,14 @@ export const componentsRoutes = [
         path: '/plantValidation',
         Component: PlantValidation,
         id: v1()
+    },
+    {
+        path: '/modal',
+        Component:ModalBlock,
+        id: v1()
     }
 ]
+
 export const animationRoutes = [
     {
         path: '/rtg',
