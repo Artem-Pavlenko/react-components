@@ -13,6 +13,7 @@ import Preloader_CSSTransition
 import TypingEffect from "../Components/Animations/TypingEffect/TypingEffect";
 import {ModalBlock} from "../Components/Modal/ModalBlock";
 import BurgerMenu from "../Components/BurgerMenu/BurgerMenu";
+import Checkbox from "../Components/Checkbox/Checkbox";
 
 
 export const componentsRoutes = [
@@ -60,6 +61,11 @@ export const componentsRoutes = [
         path: '/burgerMenu',
         Component: BurgerMenu,
         id : v1()
+    },
+    {
+        path: '/checkbox',
+        Component: Checkbox,
+        id: v1()
     }
 ]
 

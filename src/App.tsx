@@ -22,6 +22,7 @@ function App() {
                         <li><Link to={'/dragAndDrop-upload_file'}>Drag and drop(upload file)</Link></li>
                         <li><Link to={'/plantValidation'}>Plant validation</Link></li>
                         <li><Link to={'/modal'}>Modal</Link></li>
+                        <li><Link to={'/checkbox'}>Checkbox</Link></li>
                     </ul>
                 </div>
                 <div>
