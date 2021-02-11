@@ -38,13 +38,13 @@ function App() {
                     <div>
                         <h2>React-components</h2>
                         <ul>
-                            {links.map(l => <li><Link to={l.path}>{l.description}</Link></li>)}
+                            {links.map(l => <li key={l.path}><Link to={l.path}>{l.description}</Link></li>)}
                         </ul>
                     </div>
                     <div>
                         <h2>Animation's</h2>
                         <ul>
-                            {animationLinks.map(l => <li><Link to={l.path}>{l.description}</Link></li>)}
+                            {animationLinks.map(l => <li key={l.path}><Link to={l.path}>{l.description}</Link></li>)}
                         </ul>
                     </div>
                 </div>

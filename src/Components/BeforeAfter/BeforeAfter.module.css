@@ -39,3 +39,21 @@
     background-color: #042f36;
     cursor: e-resize;
 }
+
+.sliderResize::before {
+    content: '>';
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    top: 50%;
+    left: 1px;
+}
+
+.sliderResize::after {
+    content: '<';
+    position: absolute;
+    font-size: 30px;
+    font-weight: 700;
+    top: 50%;
+    right: 1px;
+}
