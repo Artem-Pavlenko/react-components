@@ -1,19 +1,20 @@
-import {MaterialButton} from "../Components/MaterialButton/MaterialButton";
-import {BurgerMenuButton} from "../Components/BurgerMenuButton/BurgerMenuButton";
-import {DragAndDrop_List} from "../Components/Drag And Drop/DragAndDrop_List/DragAndDrop_List";
-import {DragAndDrop2} from "../Components/Drag And Drop/DragAndDrop2/DragAndDrop2";
-import {DragAndDrop_trello} from "../Components/Drag And Drop/DragAndDrop_ difficult_version/DragAndDrop_trello";
-import {DragAndDrop_upload_file} from "../Components/Drag And Drop/DragAndDrop_upload_file/DragAndDrop_upload_file";
-import {PlantValidation} from "../Components/Validation/PlantValidation/PlantValidation";
-import Preloader_transition
-    from "../Components/Animations/react-transition-group/Preloader_transition/Preloader_transition";
+import {DragAndDrop_upload_file} from "../Components/Drag And Drop/DragAndDrop_upload_file/DragAndDrop_upload_file"
+import {DragAndDrop_trello} from "../Components/Drag And Drop/DragAndDrop_ difficult_version/DragAndDrop_trello"
+import {DragAndDrop_List} from "../Components/Drag And Drop/DragAndDrop_List/DragAndDrop_List"
+import {PlantValidation} from "../Components/Validation/PlantValidation/PlantValidation"
+import {DragAndDrop2} from "../Components/Drag And Drop/DragAndDrop2/DragAndDrop2"
+import {BurgerMenuButton} from "../Components/BurgerMenuButton/BurgerMenuButton"
+import TypingEffect from "../Components/Animations/TypingEffect/TypingEffect"
+import {MaterialButton} from "../Components/MaterialButton/MaterialButton"
+import BurgerMenu from "../Components/BurgerMenu/BurgerMenu"
+import {ModalBlock} from "../Components/Modal/ModalBlock"
+import Checkbox from "../Components/Checkbox/Checkbox"
 import {v1} from 'uuid'
 import Preloader_CSSTransition
-    from "../Components/Animations/react-transition-group/Preloader_CSSTransition/Preloader_CSSTransition";
-import TypingEffect from "../Components/Animations/TypingEffect/TypingEffect";
-import {ModalBlock} from "../Components/Modal/ModalBlock";
-import BurgerMenu from "../Components/BurgerMenu/BurgerMenu";
-import Checkbox from "../Components/Checkbox/Checkbox";
+    from "../Components/Animations/react-transition-group/Preloader_CSSTransition/Preloader_CSSTransition"
+import Preloader_transition
+    from "../Components/Animations/react-transition-group/Preloader_transition/Preloader_transition"
+import BeforeAfter from "../Components/BeforeAfter/BeforeAfter";
 
 
 export const componentsRoutes = [
@@ -54,17 +55,22 @@ export const componentsRoutes = [
     },
     {
         path: '/modal',
-        Component:ModalBlock,
+        Component: ModalBlock,
         id: v1()
     },
     {
         path: '/burgerMenu',
         Component: BurgerMenu,
-        id : v1()
+        id: v1()
     },
     {
         path: '/checkbox',
         Component: Checkbox,
+        id: v1()
+    },
+    {
+        path: '/beforeAfter',
+        Component: BeforeAfter,
         id: v1()
     }
 ]

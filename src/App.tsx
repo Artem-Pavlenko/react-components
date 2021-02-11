@@ -3,38 +3,53 @@ import {Link} from 'react-router-dom'
 import './App.css'
 import AppRouter from './routes/AppRouter'
 
+type LinkType = {
+    path: string
+    description: string
+}
+
 function App() {
 
-
+    const links: LinkType[] = [
+        {path: '/button', description: 'Material button'},
+        {path: '/burgerMenuButton', description: 'Burger menu(button)'},
+        {path: '/burgerMenu', description: 'Burger menu'},
+        {path: '/dragAndDrop', description: 'Drag and Drop'},
+        {path: '/dragAndDrop2', description: 'Drag and Drop 2'},
+        {path: '/dragAndDrop-difficult_version', description: 'Drag and drop(difficult version)'},
+        {path: '/dragAndDrop-upload_file', description: 'Drag and drop(upload file)'},
+        {path: '/plantValidation', description: 'Plant validation'},
+        {path: '/modal', description: 'Modal'},
+        {path: '/checkbox', description: 'Checkbox'},
+        {path: '/beforeAfter', description: 'Before/After effect'}
+    ]
+    const animationLinks: LinkType[] = [
+        {path: '/rtg', description: 'Preloader (Transition)'},
+        {path: '/rtgCSSTransition', description: 'Preloader (CSSTransition)'},
+        {path: '/typingEffect', description: 'Typing effect'},
+    ]
 
     return (
         <div className="App">
             <div className="navBar">
-                <div>
-                    <h2>React-components</h2>
-                    <ul>
-                        <li><Link to={'/button'}>Material button</Link></li>
-                        <li><Link to={'/burgerMenuButton'}>Burger menu(button)</Link></li>
-                        <li><Link to={'/burgerMenu'}>Burger menu</Link></li>
-                        <li><Link to={'/dragAndDrop'}>Drag and drop</Link></li>
-                        <li><Link to={'/dragAndDrop2'}>Drag and drop 2</Link></li>
-                        <li><Link to={'/dragAndDrop-difficult_version'}>Drag and drop(difficult version)</Link></li>
-                        <li><Link to={'/dragAndDrop-upload_file'}>Drag and drop(upload file)</Link></li>
-                        <li><Link to={'/plantValidation'}>Plant validation</Link></li>
-                        <li><Link to={'/modal'}>Modal</Link></li>
-                        <li><Link to={'/checkbox'}>Checkbox</Link></li>
-                    </ul>
-                </div>
-                <div>
-                    <h2>Animation's</h2>
-                    <ul>
-                        <li><Link to={'/rtg'}>Preloader (Transition)</Link></li>
-                        <li><Link to={'/rtgCSSTransition'}>Preloader (CSSTransition)</Link></li>
-                        <li><Link to={'/typingEffect'}>Typing effect</Link></li>
-                    </ul>
+                <AppRouter/>
+
+                <div className="navBlock">
+                    <div>
+                        <h2>React-components</h2>
+                        <ul>
+                            {links.map(l => <li><Link to={l.path}>{l.description}</Link></li>)}
+                        </ul>
+                    </div>
+                    <div>
+                        <h2>Animation's</h2>
+                        <ul>
+                            {animationLinks.map(l => <li><Link to={l.path}>{l.description}</Link></li>)}
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <AppRouter/>
+
         </div>
     )
 }

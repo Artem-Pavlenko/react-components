@@ -1,0 +1,41 @@
+
+.beforeAfterBlock {
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+}
+
+.slider {
+    width: 1024px;
+    height: 512px;
+    position: relative;
+    background-color: gray;
+}
+
+.sliderBefore {
+    width: 512px;
+    height: 512px;
+    position: absolute;
+    z-index: 2;
+    background: url("../../assets/img/7_5.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sliderAfter {
+    width: 1024px;
+    height: 512px;
+    position: absolute;
+    background: url("../../assets/img/week10_700.jpg") no-repeat center center fixed;
+    background-size: cover;
+}
+
+.sliderResize {
+    width: 5px;
+    position: absolute;
+    height: 100%;
+    right: 0;
+    top: 0;
+    background-color: #042f36;
+    cursor: e-resize;
+}
