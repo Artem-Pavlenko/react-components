@@ -7,6 +7,8 @@ const BeforeAfter = () => {
     const [trigger, setTrigger] = useState(false)
     const [currentClientX, setCurrentClientX] = useState(512)
 
+
+
     const mouseDownHandler = (e: MouseEvent<HTMLDivElement>) => {
         setCurrentClientX(e.clientX)
         setTrigger(true)
@@ -27,8 +29,7 @@ const BeforeAfter = () => {
         <div className={s.beforeAfterBlock}>
             <div className={s.slider} onMouseMove={moveHandler}>
                 <div className={s.sliderBefore} style={{width: `${width}px`}}>
-                    <div className={s.sliderResize} datatype={'resize'} onMouseDown={mouseDownHandler}
-                         onMouseUp={mouseUpHandler}/>
+                    <div className={s.sliderResize} onMouseDown={mouseDownHandler} onMouseUp={mouseUpHandler}/>
                 </div>
                 <div className={s.sliderAfter}/>
             </div>
