@@ -21,7 +21,8 @@ function App() {
         {path: '/plantValidation', description: 'Plant validation'},
         {path: '/modal', description: 'Modal'},
         {path: '/checkbox', description: 'Checkbox'},
-        {path: '/beforeAfter', description: 'Before/After effect'}
+        {path: '/beforeAfter', description: 'Before/After effect'},
+        {path: '/range', description: 'Range'}
     ]
     const animationLinks: LinkType[] = [
         {path: '/rtg', description: 'Preloader (Transition)'},
@@ -33,7 +34,6 @@ function App() {
         <div className="App">
             <div className="navBar">
                 <AppRouter/>
-
                 <div className="navBlock">
                     <div>
                         <h2>React-components</h2>

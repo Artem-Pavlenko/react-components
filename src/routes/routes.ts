@@ -15,6 +15,7 @@ import Preloader_CSSTransition
 import Preloader_transition
     from "../Components/Animations/react-transition-group/Preloader_transition/Preloader_transition"
 import BeforeAfter from "../Components/BeforeAfter/BeforeAfter";
+import Range from "../Components/Range/Range"
 
 
 export const componentsRoutes = [
@@ -71,6 +72,11 @@ export const componentsRoutes = [
     {
         path: '/beforeAfter',
         Component: BeforeAfter,
+        id: v1()
+    },
+    {
+        path: '/range',
+        Component: Range,
         id: v1()
     }
 ]

@@ -1,0 +1,17 @@
+
+.rangeBlock {
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.rangeBlock img {
+    width: 200px;
+}
+
+.rangeBlock input[type="range"] {
+    width: 200px;
+    display: inline-block;
+}
