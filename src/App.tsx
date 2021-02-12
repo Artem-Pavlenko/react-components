@@ -22,7 +22,8 @@ function App() {
         {path: '/modal', description: 'Modal'},
         {path: '/checkbox', description: 'Checkbox'},
         {path: '/beforeAfter', description: 'Before/After effect'},
-        {path: '/range', description: 'Range'}
+        {path: '/range', description: 'Range'},
+        {path: '/forms', description: 'Forms (+ custom input)'}
     ]
     const animationLinks: LinkType[] = [
         {path: '/rtg', description: 'Preloader (Transition)'},

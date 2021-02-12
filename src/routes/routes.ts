@@ -16,6 +16,8 @@ import Preloader_transition
     from "../Components/Animations/react-transition-group/Preloader_transition/Preloader_transition"
 import BeforeAfter from "../Components/BeforeAfter/BeforeAfter";
 import Range from "../Components/Range/Range"
+import InputCustom from "../Components/Forms/Input/InputCustom";
+import Forms from "../Components/Forms/Forms";
 
 
 export const componentsRoutes = [
@@ -77,6 +79,11 @@ export const componentsRoutes = [
     {
         path: '/range',
         Component: Range,
+        id: v1()
+    },
+    {
+        path: '/forms',
+        Component: Forms,
         id: v1()
     }
 ]

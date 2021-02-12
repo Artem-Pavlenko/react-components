@@ -4,17 +4,17 @@
     justify-content: center;
 }
 
-input {
+.checkboxBlock input {
     display: none;
 }
 
-label {
+.checkboxBlock label {
     width: 100px;
     height: 100px;
     background-color: black;
     border-radius: 50%;
 }
 
-input:checked + label {
+.checkboxBlock input:checked + label {
     background-color: red;
 }

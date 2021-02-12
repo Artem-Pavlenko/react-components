@@ -1,0 +1,9 @@
+
+.formsBlock {
+    margin: 0 auto;
+    height: 85px;
+    width: 450px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
